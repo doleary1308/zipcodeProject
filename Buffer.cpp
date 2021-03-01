@@ -39,6 +39,7 @@ buffer::~buffer()
 //-----------------------------------------------------------------------------------------------
 // init
 /// @brief opens a file 
+/// @param A char * which points to the name of a file
 /// @pre preconditions: char * contains a pointer to a file name.
 /// @post postconditions: a file with that name is opened in read only mode.
 void buffer::init(char * filename)
@@ -53,6 +54,7 @@ void buffer::init(char * filename)
 //-----------------------------------------------------------------------------------------------
 // checkOpen
 /// @brief checks if file is open
+/// @param A read only file stream called file
 /// @pre Preconditions: None
 /// @post Postconditions: A bool called flag is returned indicating
 //                 if the file did not open.
@@ -74,6 +76,7 @@ bool buffer::checkOpen(FILE *file)
 //-----------------------------------------------------------------------------------------------
 // strArr
 /// @brief reads the file and inputs the contents of the file into the array.
+/// @param A file stream called file
 /// @pre Preconditions: file contains the read stream of the open file.
 /// @post Postconditions: An array is created containing the contents of
 //                 the file.
@@ -158,6 +161,7 @@ void buffer::print()
 //-----------------------------------------------------------------------------------------------
 // getInfo
 /// @brief retrieves info from array and store it in a string.
+/// @param an int called index
 /// @pre Preconditions: index contains an int
 /// @post Postconditions: line contains a string converted from arr
 string buffer::getInfo(int index)
@@ -171,6 +175,7 @@ string buffer::getInfo(int index)
 //-----------------------------------------------------------------------------------------------
 // convertToString
 /// @brief convert the char to a string.
+/// @param 
 /// @pre Preconditions: None
 /// @post Postconditions: a string s is returned.
 string buffer::convertToString(char *a)
